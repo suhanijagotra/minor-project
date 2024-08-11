@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+        img{
+            
+            width:50%;
+            
+        }
+        body {
+            
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            
+            background-color: rgb(255, 255, 255);
+        }
+        .container {
+        background-color: #d6d7ce;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 15px 12px rgba(26, 27, 1, 0.609);
+        width: 350px;
+        text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .sign-up-button, .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+        .login-button {
+            background-color: #28a745;
+        }
+        .sign-up-button:hover {
+            background-color: #0056b3;
+        }
+        .login-button:hover {
+            background-color: #218838;
+        }
+        .existing-account {
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    
+        <img src="animation.svg" alt="Description of the image">
+
+    
+    <div class="container">
+        <h2>Create Your Account</h2>
+        <form action="/signup" method="POST">
+            <input type="text" name="username" class="input-field" placeholder="Username" required>
+            <input type="password" name="password" class="input-field" placeholder="Password" required>
+            <select name="role" class="input-field" required>
+                    <option value="<%= role %>"><%= role %><option>
+                
+            </select>
+            <button type="submit" class="sign-up-button">Sign Up</button>
+        </form>
+        <div class="existing-account">
+            Already have an account? 
+            <a href="/login">
+                <button type ="Submit" class="login-button">Log In</button>
+            </a>
+        </div>
+    
+    </div>
+</body>
+</html>
