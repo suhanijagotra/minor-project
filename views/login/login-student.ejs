@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - Online Exam Portal</title>
+    <link rel="stylesheet" href="css/login-student.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="image-container">
+            <img src="images/online exam banner image2.png" alt="Student Illustration">
+        </div>
+        <div class="form-container">
+            <h2>Student Login</h2>
+            <form id="studentLoginForm" onsubmit="return loginUser('student')">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <a href="#" class="forgot-password">Forgot password?</a>
+            <div class="signup">
+                <p>Are you new? <a href="/signup-student">Sign-up</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
